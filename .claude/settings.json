@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo create homemedix-website --private --description \"HomeMedix India — Authoritative website for medical equipment manufacturer\")"
+    ]
+  }
+}
