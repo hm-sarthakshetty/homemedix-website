@@ -12,8 +12,7 @@
   const navHTML = `
     <nav class="site-nav" role="navigation" aria-label="Main navigation">
       <a class="nav-wordmark" href="${root}index.html" aria-label="HomeMedix Home">
-        Home<span>Medix</span>
-        <small>India Pvt. Ltd.</small>
+        <img src="${root}assets/images/HM.png" alt="HomeMedix India" class="nav-logo">
       </a>
 
       <ul class="nav-links" role="list">
@@ -70,7 +69,7 @@
     <footer class="site-footer" role="contentinfo">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-brand__wm">Home<span>Medix</span></div>
+          <img src="${root}assets/images/HM.png" alt="HomeMedix India" class="footer-logo">
           <p>ISO-certified manufacturer of medical devices from Bengaluru's KSSIDC Industrial Estate. Trusted by hospitals and home care users across India since 1998.</p>
           <span class="label">Made in India &nbsp;·&nbsp; ISO 9001 &amp; 13485</span>
         </div>
