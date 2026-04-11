@@ -28,6 +28,7 @@
             <a href="${root}products/cpap-bipap.html"             role="menuitem">CPAP &amp; BiPAP</a>
             <a href="${root}products/hm-pro.html"                 role="menuitem">HM Pro</a>
             <a href="${root}products/latex-gloves.html"           role="menuitem">Latex Gloves</a>
+            <a href="${root}products/blood-pressure-monitor.html" role="menuitem">Blood Pressure Monitors</a>
           </div>
         </li>
         <li><a href="${root}resources/index.html">Resources</a></li>
@@ -56,6 +57,7 @@
       <a class="mob-sub" href="${root}products/cpap-bipap.html">CPAP &amp; BiPAP</a>
       <a class="mob-sub" href="${root}products/hm-pro.html">HM Pro</a>
       <a class="mob-sub" href="${root}products/latex-gloves.html">Latex Gloves</a>
+      <a class="mob-sub" href="${root}products/blood-pressure-monitor.html">Blood Pressure Monitors</a>
       <a class="mob-main-link" href="${root}resources/index.html">Resources</a>
       <a class="mob-main-link" href="${root}about.html">About</a>
       <a class="mob-main-link" href="${root}faq.html">FAQ</a>
@@ -85,6 +87,7 @@
             <li><a href="${root}products/cpap-bipap.html">CPAP &amp; BiPAP</a></li>
             <li><a href="${root}products/hm-pro.html">HM Pro</a></li>
             <li><a href="${root}products/latex-gloves.html">Latex Gloves</a></li>
+            <li><a href="${root}products/blood-pressure-monitor.html">Blood Pressure Monitors</a></li>
           </ul>
         </div>
 
