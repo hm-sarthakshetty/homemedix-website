@@ -70,7 +70,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="${root}assets/images/HM.png" alt="HomeMedix India" class="footer-logo">
-          <p>ISO-certified manufacturer of medical devices from Bengaluru's KSSIDC Industrial Estate. Trusted by hospitals and home care users across India since 1998.</p>
+          <p>ISO-certified medical device company, est. 2004. Manufacturing in-house since 2023 at KSSIDC Industrial Estate, Bengaluru.</p>
           <span class="label">Made in India &nbsp;·&nbsp; ISO 9001 &amp; 13485</span>
         </div>
 
@@ -141,7 +141,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2025 HomeMedix India Pvt. Ltd. &nbsp;·&nbsp; Bengaluru, Karnataka</span>
+        <span>© ${new Date().getFullYear()} HomeMedix India Pvt. Ltd. &nbsp;·&nbsp; Bengaluru, Karnataka</span>
         <div class="footer-certs">
           <span class="footer-cert">ISO 9001:2016</span>
           <span class="footer-cert">ISO 13485:2016</span>

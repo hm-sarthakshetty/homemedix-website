@@ -5,24 +5,6 @@
 (function () {
   'use strict';
 
-  /* ---------- Navbar scroll behaviour ---------- */
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    function updateNavbar() {
-      if (window.scrollY > 40) {
-        navbar.classList.add('navbar--scrolled');
-        navbar.classList.remove('navbar--transparent');
-      } else {
-        navbar.classList.remove('navbar--scrolled');
-        navbar.classList.add('navbar--transparent');
-      }
-    }
-    window.addEventListener('scroll', updateNavbar, { passive: true });
-    updateNavbar();
-  }
-
-  /* ---------- Mobile hamburger (open/close/escape handled in components.js) ---------- */
-
   /* ---------- Scroll-to-top button ---------- */
   const scrollTopBtn = document.getElementById('scrollTop');
   if (scrollTopBtn) {
@@ -51,15 +33,41 @@
     fadeEls.forEach(el => el.classList.add('visible'));
   }
 
+  /* ---------- Stagger-children — reveal children sequentially ---------- */
+  const staggerParents = document.querySelectorAll('.stagger-children');
+  if (staggerParents.length && 'IntersectionObserver' in window) {
+    const staggerObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          Array.from(entry.target.children).forEach((child, i) => {
+            setTimeout(() => child.classList.add('visible'), i * 120);
+          });
+          staggerObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    staggerParents.forEach(el => staggerObs.observe(el));
+  } else {
+    staggerParents.forEach(el => {
+      Array.from(el.children).forEach(child => child.classList.add('visible'));
+    });
+  }
+
   /* ---------- FAQ Accordion ---------- */
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const item = this.closest('.faq-item');
       const isOpen = item.classList.contains('open');
       // Close all
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      // Toggle clicked
-      if (!isOpen) item.classList.add('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
@@ -95,15 +103,6 @@
     }, { threshold: 0.5 });
     counterEls.forEach(el => counterObserver.observe(el));
   }
-
-  /* ---------- Active nav link ---------- */
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (currentPath.endsWith(href) || currentPath.includes(href.replace('.html', '')))) {
-      link.classList.add('active');
-    }
-  });
 
   /* ---------- Smooth scroll for anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
