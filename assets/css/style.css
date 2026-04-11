@@ -134,15 +134,22 @@ a { color: inherit; text-decoration: none; }
 .nav-drop { position: relative; }
 .nav-drop__menu {
   position: absolute;
-  top: calc(100% + 1.25rem);
+  top: 100%;
   left: -1.5rem;
-  background: var(--paper);
-  border: 1px solid var(--light);
   min-width: 230px;
   display: none;
   flex-direction: column;
-  padding: 0.5rem 0;
+  padding-top: 0.75rem;
+}
+.nav-drop__menu::after {
+  content: '';
+  position: absolute;
+  top: 0.75rem; left: 0; right: 0; bottom: 0;
+  background: var(--paper);
+  border: 1px solid var(--light);
+  border-radius: 4px;
   box-shadow: 0 12px 40px rgba(6,25,46,0.10);
+  z-index: -1;
 }
 .nav-drop:hover .nav-drop__menu { display: flex; }
 .nav-drop__menu a {
