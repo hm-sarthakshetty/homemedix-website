@@ -5,6 +5,18 @@
 
 (function () {
 
+  /* ---- Google Analytics 4 ---- */
+  (function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1H7QJH18QS';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1H7QJH18QS');
+  })();
+
   const depth = window.location.pathname.split('/').filter(Boolean).length;
   const root  = depth <= 1 ? './' : '../'.repeat(depth - 1);
 
