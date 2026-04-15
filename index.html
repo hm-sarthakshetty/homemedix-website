@@ -75,246 +75,525 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/images/favicon.ico">
 </head>
-<body>
+<body class="is-home">
 
-<main>
+<main class="studio-main">
 
   <!-- =========================================================
-       TEXTBOOK HERO
+       STUDIO HERO — cohesive, overlapping, alive
   ========================================================== -->
-  <section class="textbook-hero" aria-label="Home Medix — a reference guide to the medical devices we make">
-    <div class="textbook-hero__content">
-      <div class="textbook-hero__chapter-label">A reference guide &middot; §01</div>
-      <h1 class="textbook-hero__title">
-        A guide to the medical devices we <em>build by hand</em> in Bengaluru.
-      </h1>
-      <p class="textbook-hero__lead">
-        Home Medix designs and manufactures respiratory and patient care equipment in India.
-        This site explains each device in plain language &mdash; how it works, who it&rsquo;s for,
-        and the biology behind it &mdash; for patients, caregivers, and clinicians.
-      </p>
-      <div class="textbook-hero__actions">
-        <a class="textbook-hero__cta" href="#conditions">Start with a condition &rarr;</a>
-        <a class="textbook-hero__cta" href="products/index.html">Browse our devices &rarr;</a>
-      </div>
-      <div class="textbook-hero__meta">
-        Home Medix (India) Pvt. Ltd. &middot; Established 2004 &middot; Manufacturing in-house since 2023 at KSSIDC Industrial Estate, Bengaluru.
-      </div>
-    </div>
+  <section class="studio-hero" id="studioHero" aria-label="Home Medix — precision medical devices">
+    <div class="studio-hero__stage">
 
-    <div class="textbook-hero__illustration">
-      <img
-        class="textbook-hero__image breathing-lungs"
-        src="assets/images/illustrations/lungs.png"
-        alt="Anatomical illustration of human lungs showing the bronchial tree and alveolar detail"
-        loading="eager"
-        width="2816"
-        height="1536">
-      <div class="textbook-hero__caption">Fig. 1 &mdash; The respiratory system</div>
+      <div class="studio-hero__content">
+        <div class="studio-hero__meta">
+          <span class="studio-hero__meta-dot" aria-hidden="true"></span>
+          RESPIRATORY &nbsp;·&nbsp; PATIENT CARE &nbsp;·&nbsp; DIAGNOSTICS
+        </div>
+
+        <h1 class="studio-hero__title">
+          <span class="studio-hero__title-word">Oxygen</span>
+          <span class="studio-hero__title-word">concentrators,</span>
+          <span class="studio-hero__title-word"><em>calibrated</em></span>
+          <span class="studio-hero__title-word">for</span>
+          <span class="studio-hero__title-word">care.</span>
+        </h1>
+
+        <p class="studio-hero__lead">
+          A 5&nbsp;LPM unit quiet enough to sit beside the bed. A 10&nbsp;LPM
+          workhorse steady enough to run a ward. Engineered in-house,
+          certified to ISO&nbsp;13485, backed by a three-year warranty.
+        </p>
+
+        <div class="studio-hero__actions">
+          <a class="studio-btn studio-btn--primary" href="products/index.html">
+            Browse our devices
+            <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="studio-btn studio-btn--ghost" href="faq.html">
+            Specifications &amp; FAQs
+            <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero product — sketch draws in, then color fills in over it -->
+      <div class="studio-hero__schematic">
+        <div class="studio-hero__morph">
+          <img
+            class="studio-hero__morph-sketch"
+            src="assets/images/products/line-art/v7-fine-canny.png"
+            alt=""
+            loading="eager"
+            width="900"
+            height="900"
+            aria-hidden="true">
+          <img
+            class="studio-hero__morph-photo"
+            src="assets/images/products/oxygen-concentrator-kv-hero.png"
+            alt="Home Medix Oxygen Concentrator KV — compact portable oxygen therapy device"
+            loading="eager"
+            width="900"
+            height="900">
+        </div>
+      </div>
+
+      <!-- Continuous waveform — respiration rate graphic running across the bottom -->
+      <div class="studio-hero__waveform" aria-hidden="true">
+        <svg viewBox="0 0 800 60" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0,30 L80,30 Q100,30 110,10 Q120,-5 130,10 Q140,30 160,30 L240,30 Q260,30 270,10 Q280,-5 290,10 Q300,30 320,30 L400,30 Q420,30 430,10 Q440,-5 450,10 Q460,30 480,30 L560,30 Q580,30 590,10 Q600,-5 610,10 Q620,30 640,30 L720,30 Q740,30 750,10 Q760,-5 770,10 Q780,30 800,30" />
+          <path d="M800,30 L880,30 Q900,30 910,10 Q920,-5 930,10 Q940,30 960,30 L1040,30 Q1060,30 1070,10 Q1080,-5 1090,10 Q1100,30 1120,30 L1200,30 Q1220,30 1230,10 Q1240,-5 1250,10 Q1260,30 1280,30 L1360,30 Q1380,30 1390,10 Q1400,-5 1410,10 Q1420,30 1440,30 L1520,30 Q1540,30 1550,10 Q1560,-5 1570,10 Q1580,30 1600,30" transform="translate(0,0)"/>
+        </svg>
+      </div>
+
+      <!-- Trust chips — brand-level reassurance, not product specs -->
+      <div class="studio-hero__specs">
+        <div class="studio-hero__spec">
+          <span class="studio-hero__spec-val">3&nbsp;yr</span>
+          <span class="studio-hero__spec-key">Warranty &middot; all oxygen units</span>
+        </div>
+        <div class="studio-hero__spec">
+          <span class="studio-hero__spec-val">ISO&nbsp;13485</span>
+          <span class="studio-hero__spec-key">Medical device QMS</span>
+        </div>
+        <div class="studio-hero__spec">
+          <span class="studio-hero__spec-val">Same&#8209;day</span>
+          <span class="studio-hero__spec-key">Spare parts, India-wide</span>
+        </div>
+        <div class="studio-hero__spec">
+          <span class="studio-hero__spec-val">20+&nbsp;yr</span>
+          <span class="studio-hero__spec-key">Medical device expertise</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- =========================================================
-       TWO-COLUMN — ABOUT / WHY
+       01 · OXYGEN THERAPY — flagship line (KX + KV)
   ========================================================== -->
-  <div class="two-col" aria-label="About Home Medix">
-    <div class="content-block">
-      <span class="overline anim-up">Our Story</span>
-      <h2 class="anim-up anim-d1">
-        Built in Bengaluru,
-        <span class="accent">trusted across India</span>
+  <section class="studio-section" aria-labelledby="oxygen-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">01</span>
+        <span class="studio-numhead__label">Oxygen Therapy</span>
+      </header>
+      <h2 id="oxygen-head" class="studio-bighead">
+        Oxygen that <em>holds</em><br>
+        when it has to.
       </h2>
-      <p>
-        Founded in 2004 at KSSIDC Industrial Estate, Rajajinagar, Home Medix India Pvt. Ltd.
-        began by sourcing and distributing quality medical devices to Indian hospitals and families.
-        In 2023, we transitioned to in-house manufacturing — giving us full control over quality,
-        pricing, and supply chain.
+      <p class="studio-lead">
+        Built for the moment that matters &mdash; when the patient&rsquo;s
+        saturation drops and nobody wants to reach for a backup. A compact
+        unit for the patient recovering at home, a high-flow workhorse for the
+        ward. Both carry a three-year warranty and the same in-house
+        biomedical service team.
       </p>
-      <p>
-        Under the leadership of Managing Director Mr. Sukumar Shetty, we manufacture and
-        supply precision medical equipment — backed by dual ISO certification, a dedicated
-        biomedical service team, and over two decades of domain expertise.
-      </p>
-      <a class="btn btn--outline" href="about.html" style="margin-top:2.5rem;display:inline-block;">Our Company</a>
-    </div>
 
-    <div class="content-block">
-      <span class="overline anim-up">Why Home Medix</span>
-      <h2 class="anim-up anim-d1">
-        We build it.
-        <span class="accent">We stand behind it.</span>
+      <div class="studio-featured">
+
+        <a class="studio-featured__card" href="products/oxygen-concentrator-kx.html">
+          <div class="studio-featured__photo">
+            <img src="assets/images/products/oxygen-concentrator-kx-hero.png"
+                 alt="Home Medix Oxygen Concentrator KX — clinical 10 LPM unit"
+                 loading="lazy" width="800" height="800">
+          </div>
+          <div class="studio-featured__body">
+            <div class="studio-featured__tag">Clinical &middot; 10&nbsp;LPM</div>
+            <h3 class="studio-featured__name">Oxygen Concentrator KX</h3>
+            <p class="studio-featured__desc">
+              For the patient who can&rsquo;t afford a gap in oxygen. Handles
+              continuous high-flow for wards, HDUs, and home cases where a
+              5&nbsp;LPM unit isn&rsquo;t enough.
+            </p>
+            <ul class="studio-featured__specs" role="list">
+              <li>
+                <span class="studio-featured__spec-val">10 LPM</span>
+                <span class="studio-featured__spec-key">Max Flow</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">&le;48 dB</span>
+                <span class="studio-featured__spec-key">Noise</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">25.6 kg</span>
+                <span class="studio-featured__spec-key">Weight</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">3 yr</span>
+                <span class="studio-featured__spec-key">Warranty</span>
+              </li>
+            </ul>
+            <span class="studio-featured__cta">
+              See KX
+              <span class="studio-featured__arrow" aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </a>
+
+        <a class="studio-featured__card" href="products/oxygen-concentrator-kv.html">
+          <div class="studio-featured__photo">
+            <img src="assets/images/products/oxygen-concentrator-kv-hero.png"
+                 alt="Home Medix Oxygen Concentrator KV — compact 5 LPM home unit"
+                 loading="lazy" width="800" height="800">
+          </div>
+          <div class="studio-featured__body">
+            <div class="studio-featured__tag">Home &middot; 5&nbsp;LPM</div>
+            <h3 class="studio-featured__name">Oxygen Concentrator KV</h3>
+            <p class="studio-featured__desc">
+              Your parent sleeps through the night without being woken up by
+              the machine. Quiet enough to sit beside the bed, light enough
+              to move by yourself, built to run continuously.
+            </p>
+            <ul class="studio-featured__specs" role="list">
+              <li>
+                <span class="studio-featured__spec-val">5 LPM</span>
+                <span class="studio-featured__spec-key">Max Flow</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">&le;40 dB</span>
+                <span class="studio-featured__spec-key">Noise</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">13 kg</span>
+                <span class="studio-featured__spec-key">Weight</span>
+              </li>
+              <li>
+                <span class="studio-featured__spec-val">3 yr</span>
+                <span class="studio-featured__spec-key">Warranty</span>
+              </li>
+            </ul>
+            <span class="studio-featured__cta">
+              See KV
+              <span class="studio-featured__arrow" aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       02 · FULL CATALOGUE — compact 6-card grid
+  ========================================================== -->
+  <section class="studio-section" aria-labelledby="catalogue-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">02</span>
+        <span class="studio-numhead__label">Full Catalogue</span>
+      </header>
+      <h2 id="catalogue-head" class="studio-bighead">
+        The rest of<br>
+        the <em>care plan.</em>
       </h2>
-      <p>
-        Every device is designed, assembled, and quality-tested at our Bengaluru
-        facility — so we control the entire process from engineering to delivery.
+      <p class="studio-lead">
+        The rest of what we make &mdash; nebulizers that deliver the dose
+        before it&rsquo;s too late, mattresses that prevent bedsores before
+        they form, CPAP units that let the spouse sleep too. Same engineers,
+        same warranty, same in-house biomedical service team.
       </p>
-      <p>
-        Our biomedical engineers handle installation, training, and ongoing
-        service support. Genuine spare parts ship same-day from our facility,
-        wherever you are in India.
-      </p>
-      <a class="text-link" href="contact.html" style="display:inline-block;margin-top:2.5rem;">Request a Quote &rarr;</a>
-    </div>
-  </div>
 
-  <!-- =========================================================
-       PULL QUOTE BAND
-  ========================================================== -->
-  <div class="pull-band" role="complementary" aria-label="Company mission">
-    <blockquote>
-      Precision healthcare devices built for Indian hospitals
-      and homes — since 2004.
-    </blockquote>
-    <cite>Home Medix India Pvt. Ltd. &nbsp;&middot;&nbsp; Bengaluru, Karnataka &nbsp;&middot;&nbsp; ISO 9001 &amp; 13485</cite>
-  </div>
+      <ul class="studio-compact" role="list">
 
-  <!-- =========================================================
-       PRODUCTS GRID
-  ========================================================== -->
-  <div class="section-pad" aria-label="Product catalogue">
-    <div class="section-head">
-      <span class="overline">Our Products</span>
-      <a class="text-link" href="products/index.html">View All Products &rarr;</a>
-    </div>
-    <div class="products-grid" role="list">
-
-      <a class="pcard" href="products/oxygen-concentrator-kx.html" role="listitem">
-        <span class="pcard__cat">Respiratory Care</span>
-        <span class="pcard__name">Oxygen Concentrator KX</span>
-        <span class="pcard__desc">93%+ pure oxygen at 5 L or 10 L/min. Designed for continuous home use and clinical settings with ultra-low noise operation.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/oxygen-concentrator-kv.html" role="listitem">
-        <span class="pcard__cat">Respiratory Care</span>
-        <span class="pcard__name">Oxygen Concentrator KV</span>
-        <span class="pcard__desc">Compact, travel-friendly model with whisper-quiet operation — ideal for home oxygen therapy.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/airquilt.html" role="listitem">
-        <span class="pcard__cat">Patient Care</span>
-        <span class="pcard__name">AirQuilt Anti-Bedsore Mattress</span>
-        <span class="pcard__desc">Alternating pressure system that prevents and heals pressure ulcers. 28 dB silent pump, 130 kg capacity.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/aquaquilt.html" role="listitem">
-        <span class="pcard__cat">Patient Care</span>
-        <span class="pcard__name">AquaQuilt Medical Water Bed</span>
-        <span class="pcard__desc">Three-chamber water bed with even weight distribution for long-term bed rest and pressure relief.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/mistyneb.html" role="listitem">
-        <span class="pcard__cat">Respiratory Care</span>
-        <span class="pcard__name">MistyNeb Nebulizer</span>
-        <span class="pcard__desc">Heavy-duty compressor nebulizer for fast, effective medication delivery — from infants to elderly patients.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/cpap-bipap.html" role="listitem">
-        <span class="pcard__cat">Sleep &amp; Respiratory</span>
-        <span class="pcard__name">CPAP &amp; BiPAP</span>
-        <span class="pcard__desc">Whisper-quiet breathing therapy devices for sleep apnea and respiratory support.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/hm-pro.html" role="listitem">
-        <span class="pcard__cat">Professional Care</span>
-        <span class="pcard__name">HM Pro</span>
-        <span class="pcard__desc">Professional-grade respiratory therapy device engineered for clinical environments requiring advanced monitoring.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-      <a class="pcard" href="products/latex-gloves.html" role="listitem">
-        <span class="pcard__cat">Consumables</span>
-        <span class="pcard__name">Latex Gloves</span>
-        <span class="pcard__desc">High-quality medical examination gloves for hospital, clinical, and laboratory use.</span>
-        <span class="pcard__link">View Details &rarr;</span>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- =========================================================
-       CERTIFICATIONS
-  ========================================================== -->
-  <div class="section-pad" aria-label="Certifications and standards">
-    <div class="section-head">
-      <span class="overline">Certifications &amp; Standards</span>
-    </div>
-    <div class="cert-row">
-      <div class="cert-cell">
-        <div class="cert-cell__id">ISO 9001:2016</div>
-        <p>Quality Management System. Every process and product is governed by international quality standards.</p>
-      </div>
-      <div class="cert-cell">
-        <div class="cert-cell__id">ISO 13485:2016</div>
-        <p>Medical Device Quality Management System — the global benchmark for medical equipment manufacturers.</p>
-      </div>
-      <div class="cert-cell">
-        <div class="cert-cell__id">Made in India</div>
-        <p>CDSCO licensed under Medical Device Rules 2017. Designed, manufactured, and quality-inspected at our Bengaluru facility.</p>
-      </div>
-      <div class="cert-cell">
-        <div class="cert-cell__id">100% Tested</div>
-        <p>Every unit undergoes a full pre-dispatch quality inspection before leaving our facility.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================================================
-       YOUTUBE VIDEOS
-  ========================================================== -->
-  <div class="section-pad" aria-label="Home Medix videos">
-    <div class="section-head">
-      <span class="overline">Watch &amp; Learn</span>
-      <a class="text-link" href="https://www.youtube.com/@Home Medix" target="_blank" rel="noopener noreferrer">Visit Our Channel &rarr;</a>
-    </div>
-    <div class="yt-promo">
-      <div class="yt-promo__text">
-        <h2>Product demos, setup guides<br>&amp; <em>expert tips</em> on YouTube</h2>
-        <p>
-          See our oxygen concentrators, nebulizers, and anti-bedsore mattresses in action.
-          Learn how to set up, maintain, and get the best results from your Home Medix devices.
-        </p>
-        <div class="yt-promo__actions">
-          <a class="btn btn--dark" href="https://www.youtube.com/@Home Medix" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align:middle;margin-right:0.5rem;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path d="M9.545 15.568V8.432L15.818 12z" fill="#fff"/></svg>
-            Watch on YouTube
+        <li>
+          <a class="studio-compact__card" href="products/hm-pro.html">
+            <span class="studio-compact__cat">Respiratory &middot; Professional</span>
+            <span class="studio-compact__name">HM Pro Nebulizer</span>
+            <span class="studio-compact__desc">
+              Built to run all day in a busy OPD &mdash; delivers medication
+              before your patient&rsquo;s breathing gets worse.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
           </a>
-          <a class="btn btn--outline" href="https://www.youtube.com/@Home Medix?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </li>
+
+        <li>
+          <a class="studio-compact__card" href="products/mistyneb.html">
+            <span class="studio-compact__cat">Respiratory &middot; Home</span>
+            <span class="studio-compact__name">MistyNeb Nebulizer</span>
+            <span class="studio-compact__desc">
+              Fast medication delivery at home &mdash; for the child mid-asthma
+              attack or the grandparent whose bronchitis flares at 2am.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="studio-compact__card" href="products/cpap-bipap.html">
+            <span class="studio-compact__cat">Sleep Therapy</span>
+            <span class="studio-compact__name">CPAP &amp; BiPAP</span>
+            <span class="studio-compact__desc">
+              Sleep through the night without waking your partner. Covers mild
+              sleep apnea all the way to chronic respiratory support.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="studio-compact__card" href="products/airquilt.html">
+            <span class="studio-compact__cat">Patient Care &middot; Anti-bedsore</span>
+            <span class="studio-compact__name">AirQuilt Mattress</span>
+            <span class="studio-compact__desc">
+              Prevents bedsores before they start. The mattress keeps shifting
+              every few minutes so the patient&rsquo;s skin doesn&rsquo;t have to.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="studio-compact__card" href="products/aquaquilt.html">
+            <span class="studio-compact__cat">Patient Care &middot; Long-term</span>
+            <span class="studio-compact__name">AquaQuilt Water Bed</span>
+            <span class="studio-compact__desc">
+              Spreads the patient&rsquo;s weight evenly &mdash; so weeks of
+              bed rest don&rsquo;t turn into months of wound care.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="studio-compact__card" href="products/latex-gloves.html">
+            <span class="studio-compact__cat">Consumables</span>
+            <span class="studio-compact__name">Latex Gloves</span>
+            <span class="studio-compact__desc">
+              A reliable barrier for every patient interaction &mdash; the
+              kind that fits right and doesn&rsquo;t tear when you need it.
+            </span>
+            <span class="studio-compact__cta">Details &rarr;</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       03 · BUILT IN BENGALURU — origin & capability
+  ========================================================== -->
+  <section class="studio-section" aria-labelledby="bengaluru-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">03</span>
+        <span class="studio-numhead__label" id="bengaluru-head">Built in Bengaluru</span>
+      </header>
+
+      <div class="studio-twocol">
+        <article class="studio-twocol__block">
+          <h3 class="studio-twocol__head">
+            Founded in 2004.<br>
+            <em>Manufacturing since 2023.</em>
+          </h3>
+          <p>
+            Home Medix India Pvt. Ltd. began in 2004 at KSSIDC Industrial
+            Estate, Rajajinagar &mdash; sourcing and distributing quality
+            medical devices to Indian hospitals and families. In 2023, we
+            transitioned to in-house manufacturing, giving us full control
+            over quality, pricing, and supply chain.
+          </p>
+          <p>
+            Under the leadership of Managing Director Sukumar Shetty, we now
+            design, assemble, and quality-test every device at our Bengaluru
+            facility.
+          </p>
+          <a class="studio-textlink" href="about.html">
+            Read the full story <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <article class="studio-twocol__block">
+          <h3 class="studio-twocol__head">
+            We build it.<br>
+            <em>We stand behind it.</em>
+          </h3>
+          <p>
+            Every device is engineered, assembled, and tested at our own
+            facility. Our biomedical team handles installation, training, and
+            ongoing service support &mdash; wherever you are in India.
+          </p>
+          <p>
+            Genuine spare parts ship same-day from Bengaluru. Dual ISO
+            certification governs every step of the process.
+          </p>
+          <a class="studio-textlink" href="contact.html">
+            Request a quote <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       04 · STANDARDS
+  ========================================================== -->
+  <section class="studio-section" aria-labelledby="standards-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">04</span>
+        <span class="studio-numhead__label">Standards</span>
+      </header>
+      <h2 id="standards-head" class="studio-bighead studio-bighead--sm">
+        So you never have to <em>wonder</em> if it was done right.
+      </h2>
+
+      <div class="studio-cert">
+        <div class="studio-cert__cell">
+          <div class="studio-cert__id">ISO 9001:2016</div>
+          <p>
+            Every process audited against the global quality benchmark &mdash;
+            so the unit you receive is the same one we built on the test bench.
+          </p>
+        </div>
+        <div class="studio-cert__cell">
+          <div class="studio-cert__id">ISO 13485:2016</div>
+          <p>
+            Medical device QMS certification &mdash; the standard hospitals
+            look for when they&rsquo;re choosing who to trust with patient care.
+          </p>
+        </div>
+        <div class="studio-cert__cell">
+          <div class="studio-cert__id">CDSCO Licensed</div>
+          <p>
+            Licensed under India&rsquo;s Medical Device Rules 2017 &mdash;
+            legally cleared for clinical, hospital, and home use.
+          </p>
+        </div>
+        <div class="studio-cert__cell">
+          <div class="studio-cert__id">100% Tested</div>
+          <p>
+            Every unit runs a full pre-dispatch inspection before it leaves
+            the line. Nothing reaches the patient untested.
+          </p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- =========================================================
-       CLOSING CTA BAND
+       05 · WATCH & LEARN — YouTube (reskinned, paper bg)
   ========================================================== -->
-  <div class="cta-band" aria-label="Contact call to action">
-    <h2>
-      Ready to equip your facility<br>
-      or care for <em>someone you love?</em>
-    </h2>
-    <p>
-      Our team will help you find the right Home Medix device for your needs.
-      Request a personalised quote today — no obligation.
-    </p>
-    <div class="cta-actions">
-      <a class="btn btn--dark" href="contact.html">Get a Free Quote</a>
-      <a class="btn btn--outline" href="https://wa.me/919886012456?text=Hello%2C%20I%20need%20help%20choosing%20a%20Home Medix%20product." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+  <section class="studio-section" aria-labelledby="watch-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">05</span>
+        <span class="studio-numhead__label">Watch &amp; Learn</span>
+      </header>
+      <h2 id="watch-head" class="studio-bighead studio-bighead--sm">
+        Set it up right the <em>first time.</em>
+      </h2>
+      <p class="studio-lead">
+        Step-by-step setup guides, maintenance walkthroughs, and real-world
+        troubleshooting &mdash; recorded by the same team that built the
+        machine. Watch before you unbox, or the moment something doesn&rsquo;t
+        feel right.
+      </p>
+      <div class="studio-actions">
+        <a class="studio-btn studio-btn--primary"
+           href="https://www.youtube.com/@HomeMedix"
+           target="_blank" rel="noopener noreferrer">
+          Watch on YouTube
+          <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="studio-btn studio-btn--ghost"
+           href="https://www.youtube.com/@HomeMedix?sub_confirmation=1"
+           target="_blank" rel="noopener noreferrer">
+          Subscribe
+          <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- =========================================================
+       06 · CONTACT — closing CTA (paper bg)
+  ========================================================== -->
+  <section class="studio-section studio-section--cta" aria-labelledby="contact-head">
+    <div class="studio-section__inner">
+      <header class="studio-numhead">
+        <span class="studio-numhead__num">06</span>
+        <span class="studio-numhead__label">Contact</span>
+      </header>
+      <h2 id="contact-head" class="studio-bighead">
+        Tell us who needs <em>care.</em><br>
+        We&rsquo;ll help you choose.
+      </h2>
+      <p class="studio-lead">
+        One message to our biomedical team and you&rsquo;ll know exactly which
+        device fits &mdash; for your ward, your parent, or your patient. Quotes
+        come back the same day, with no obligation.
+      </p>
+      <div class="studio-actions">
+        <a class="studio-btn studio-btn--primary" href="contact.html">
+          Get a Free Quote
+          <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="studio-btn studio-btn--ghost"
+           href="https://wa.me/919886012456?text=Hello%2C%20I%20need%20help%20choosing%20a%20Home%20Medix%20product."
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp us
+          <span class="studio-btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <!-- Components (nav + footer) injected dynamically -->
 <script src="assets/js/components.js"></script>
+
+<!-- Studio hero — cursor parallax -->
+<script>
+  (function () {
+    var hero = document.getElementById('studioHero');
+    if (!hero) return;
+
+    var rafId = null;
+    var targetMx = 0, targetMy = 0;
+    var currentMx = 0, currentMy = 0;
+
+    function onMove(e) {
+      var rect = hero.getBoundingClientRect();
+      if (e.clientY < rect.top || e.clientY > rect.bottom) return;
+      // -0.5 to 0.5, normalised from center
+      targetMx = (e.clientX - rect.left) / rect.width - 0.5;
+      targetMy = (e.clientY - rect.top) / rect.height - 0.5;
+      if (!rafId) rafId = requestAnimationFrame(update);
+    }
+
+    function update() {
+      // smooth lerp toward target
+      currentMx += (targetMx - currentMx) * 0.08;
+      currentMy += (targetMy - currentMy) * 0.08;
+      hero.style.setProperty('--mx', currentMx.toFixed(3));
+      hero.style.setProperty('--my', currentMy.toFixed(3));
+      if (Math.abs(targetMx - currentMx) > 0.001 || Math.abs(targetMy - currentMy) > 0.001) {
+        rafId = requestAnimationFrame(update);
+      } else {
+        rafId = null;
+      }
+    }
+
+    window.addEventListener('mousemove', onMove, { passive: true });
+
+    // Also on touch: slow idle drift so it never feels completely static on mobile
+    if (window.matchMedia('(hover: none)').matches) {
+      var t = 0;
+      setInterval(function () {
+        t += 0.02;
+        targetMx = Math.sin(t) * 0.3;
+        targetMy = Math.cos(t * 0.7) * 0.3;
+        if (!rafId) rafId = requestAnimationFrame(update);
+      }, 50);
+    }
+  })();
+</script>
 </body>
 </html>
