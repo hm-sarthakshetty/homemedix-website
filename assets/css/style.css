@@ -13,6 +13,13 @@
   --mid:    #49607A;
   --light:  #C8D8E8;
 
+  /* Living Textbook system */
+  --paper-warm:   #FAF8F3;  /* parchment off-white */
+  --ink-warm:     #1A1E2E;  /* softer body ink */
+  --margin-note:  #6B7A8F;  /* muted slate for sidenotes */
+  --rule:         #E2DCCC;  /* warm hair rule */
+  --annotation:   #B85C3C;  /* terracotta for anatomical labels */
+
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
   --gutter: 6vw;
@@ -305,6 +312,191 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+/* ============================================================
+   LIVING TEXTBOOK — HERO
+   ============================================================ */
+.textbook-hero {
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 9rem var(--gutter) 5rem;
+  background: var(--paper-warm);
+  color: var(--ink-warm);
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+}
+.textbook-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(184,92,60,0.025) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(16,89,196,0.03) 0%, transparent 55%);
+  pointer-events: none;
+}
+.textbook-hero > * { position: relative; }
+
+.textbook-hero__chapter-label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--margin-note);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.textbook-hero__chapter-label::before,
+.textbook-hero__chapter-label::after {
+  content: '';
+  flex: 0 0 40px;
+  height: 1px;
+  background: var(--rule);
+}
+.textbook-hero__chapter-label::after { flex: 1 1 auto; max-width: 120px; }
+
+.textbook-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  margin-bottom: 2rem;
+  color: var(--ink-warm);
+}
+.textbook-hero__title em {
+  font-style: italic;
+  color: var(--annotation);
+  font-weight: 700;
+}
+
+.textbook-hero__lead {
+  font-family: var(--font-sans);
+  font-size: 1.04rem;
+  line-height: 1.85;
+  color: var(--mid);
+  max-width: 54ch;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.textbook-hero__actions {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.textbook-hero__cta {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-warm);
+  border-bottom: 1px solid var(--ink-warm);
+  padding-bottom: 0.2rem;
+  transition: color 0.3s, border-color 0.3s, letter-spacing 0.3s;
+}
+.textbook-hero__cta:hover {
+  color: var(--annotation);
+  border-color: var(--annotation);
+  letter-spacing: 0.02em;
+}
+
+.textbook-hero__meta {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--margin-note);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  max-width: 42ch;
+  line-height: 1.7;
+}
+
+/* ---- Illustration column ---- */
+.textbook-hero__illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.textbook-hero__svg {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  color: var(--ink-warm);
+}
+
+.textbook-hero__caption {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--margin-note);
+  text-align: center;
+  max-width: 32ch;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+.textbook-hero__caption::before,
+.textbook-hero__caption::after {
+  content: '';
+  flex: 0 0 28px;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* ---- Lung breathing animation (~12 breaths per minute = 5s cycle) ---- */
+@keyframes gentleBreath {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  40%      { transform: scale(1.035); opacity: 1; }
+  60%      { transform: scale(1.035); opacity: 1; }
+}
+.breathing-lungs {
+  transform-origin: 200px 300px;
+  animation: gentleBreath 5s ease-in-out infinite;
+}
+
+/* ---- Stroke draw-in reveal on load ---- */
+@keyframes strokeDraw {
+  from { stroke-dashoffset: 1200; }
+  to   { stroke-dashoffset: 0; }
+}
+.illustration-draw path,
+.illustration-draw line {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: strokeDraw 3s ease-out 0.3s forwards;
+}
+.illustration-draw circle {
+  opacity: 0;
+  animation: fadeInAlveoli 1s ease-out 2.8s forwards;
+}
+@keyframes fadeInAlveoli {
+  to { opacity: 1; }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 900px) {
+  .textbook-hero {
+    grid-template-columns: 1fr;
+    padding: 6rem var(--gutter) 3.5rem;
+    gap: 3rem;
+    min-height: auto;
+  }
+  .textbook-hero__illustration { order: -1; }
+  .textbook-hero__svg { max-width: 280px; }
+  .textbook-hero__title { font-size: clamp(2.1rem, 8vw, 3rem); }
 }
 
 /* ============================================================
