@@ -918,6 +918,94 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   STUDIO HERO — LIFESTYLE VARIANT
+   Full-bleed lifestyle photo behind the text. No animation.
+   Toggle via adding `studio-hero--lifestyle` class.
+   ============================================================ */
+.studio-hero--lifestyle {
+  background:
+    linear-gradient(
+      to right,
+      rgba(250,250,247,0.96) 0%,
+      rgba(250,250,247,0.85) 28%,
+      rgba(250,250,247,0.45) 48%,
+      rgba(250,250,247,0.10) 64%,
+      transparent 78%
+    ),
+    /* Anchor to bottom-right so the wheels/floor stay visible and the
+       empty wall/ceiling at the top gets cropped — product sits higher
+       in frame, aligning with the text column */
+    url('../images/hero/kv-lifestyle.webp') right bottom/cover no-repeat,
+    var(--studio-paper);
+  min-height: 78vh;
+  padding-bottom: 3rem;
+}
+/* Kill the ambient glow + dot grid — the photo is the visual */
+.studio-hero--lifestyle::before,
+.studio-hero--lifestyle::after {
+  display: none;
+}
+/* Stage becomes a single-column left-anchored container */
+.studio-hero--lifestyle .studio-hero__stage {
+  display: block;
+  padding-bottom: 0;
+}
+.studio-hero--lifestyle .studio-hero__content {
+  max-width: 560px;
+}
+/* The photo IS the product visual — hide the morph animation */
+.studio-hero--lifestyle .studio-hero__schematic,
+.studio-hero--lifestyle .studio-hero__waveform {
+  display: none;
+}
+/* Trust chips — simple strip with dashed rule, darker text for contrast
+   against the wood-floor area of the image */
+.studio-hero--lifestyle .studio-hero__specs {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(10,10,20,0.28);
+  max-width: 900px;
+}
+.studio-hero--lifestyle .studio-hero__spec-val { color: var(--studio-ink); }
+.studio-hero--lifestyle .studio-hero__spec-key { color: var(--studio-ink); }
+
+@media (max-width: 960px) {
+  .studio-hero--lifestyle {
+    /* Swap to the portrait-cropped art-directed image with a
+       top-to-bottom paper gradient so text at the top stays legible
+       while the product sits clearly in the lower portion of the frame */
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(250,250,247,0.97) 0%,
+        rgba(250,250,247,0.92) 30%,
+        rgba(250,250,247,0.72) 48%,
+        rgba(250,250,247,0.35) 65%,
+        rgba(250,250,247,0.08) 82%,
+        transparent 92%
+      ),
+      url('../images/hero/kv-lifestyle-mobile.webp') center bottom/cover no-repeat,
+      var(--studio-paper);
+    aspect-ratio: auto;
+    min-height: 100vh;
+    padding: 5rem var(--gutter) 2.5rem;
+  }
+  .studio-hero--lifestyle .studio-hero__stage {
+    padding-bottom: 0;
+  }
+  .studio-hero--lifestyle .studio-hero__content {
+    max-width: none;
+  }
+  .studio-hero--lifestyle .studio-hero__specs {
+    margin-top: 2rem;
+  }
+}
+
+/* ============================================================
    STUDIO SECTIONS — LANDING PAGE
    Scoped to body.is-home. Paper bg, Inter display, teal accent,
    mono labels, numbered section headers. Consistent with hero.
